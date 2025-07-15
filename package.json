@@ -1,0 +1,51 @@
+{
+  "name": "capitalize-utils",
+  "version": "1.0.0",
+  "description": "A comprehensive TypeScript library for text capitalization utilities supporting English, Ukrainian, and Russian languages",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs",
+    "dev": "tsup src/index.ts --dts --format esm,cjs --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "type-check": "tsc --noEmit",
+    "check": "npm run type-check && npm run test:run"
+  },
+  "keywords": [
+    "capitalize",
+    "text",
+    "string",
+    "utils",
+    "typescript",
+    "multilingual",
+    "english",
+    "ukrainian",
+    "russian"
+  ],
+  "author": "Dragon2000v <shmatko064@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "typescript": "^5.3.0",
+    "tsup": "^8.0.0",
+    "vitest": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/capitalize-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/capitalize-utils/issues"
+  },
+  "homepage": "https://github.com/yourusername/capitalize-utils#readme"
+}
